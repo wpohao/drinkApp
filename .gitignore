@@ -1,53 +1,48 @@
-# === Xcode / Swift 專案 .gitignore ===
-# 目的：把「編譯產物、使用者個人狀態、相依套件快取」擋在 git 外，
+# === Android / Gradle 專案 .gitignore ===
+# 目的：把「編譯產物、使用者個人設定、機密金鑰」擋在 git 外，
 # 讓 repo 只留原始碼，維持個位數 MB，免費 GitHub 額度即足夠。
 
-## macOS
+## 作業系統
 .DS_Store
+Thumbs.db
 
-## Xcode 使用者個人設定 / 狀態
-xcuserdata/
-*.xcuserstate
-*.pbxuser
-!default.pbxuser
-*.mode1v3
-!default.mode1v3
-*.mode2v3
-!default.mode2v3
-*.perspectivev3
-!default.perspectivev3
-*.moved-aside
-*.xccheckout
-*.xcscmblueprint
+## Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+# 註：gradle-wrapper.jar 要保留 commit，讓 clone 者不必先裝 Gradle。
 
 ## 編譯產物（最會撐大 repo，一定要排除）
-build/
-DerivedData/
-*.hmap
-*.ipa
-*.dSYM
-*.dSYM.zip
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+release/
+captures/
 
-## Swift Package Manager
-.build/
-.swiftpm/
-# 註：Package.resolved 建議「保留 commit」以鎖定套件版本，故不忽略。
+## Android Studio / IntelliJ 使用者個人設定
+.idea/
+*.iml
+.navigation/
+misc/
 
-## CocoaPods（若日後改用，取消下一行註解）
-# Pods/
+## 本機專案設定（含 SDK 路徑，因機而異，不進 repo）
+local.properties
 
-## Carthage
-Carthage/Build/
+## NDK / 原生
+obj/
+.cxx/
 
-## fastlane（若日後導入自動化上架）
-fastlane/report.xml
-fastlane/Preview.html
-fastlane/screenshots/**/*.png
-fastlane/test_output
+## 測試與覆蓋率報告
+/reports/
+lint-results*.xml
 
-## 機密：API 金鑰、憑證、AdMob/Firebase 設定（避免外洩，勿進 repo）
-*.mobileprovision
+## 機密：簽章金鑰、AdMob/Firebase 設定、API 金鑰（避免外洩，勿進 repo）
+*.jks
+*.keystore
+keystore.properties
+signing.properties
+# google-services.json   # 若導入 Firebase，內含專案設定，視情況取消註解排除
+secrets.properties
 *.p12
-*.p8
-# GoogleService-Info.plist
-Secrets.xcconfig
