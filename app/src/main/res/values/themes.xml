@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Activity 主題：實際畫面樣式由 Compose 的 DrinkSugarTheme 控制，此處只需一個無 ActionBar 的基底。 -->
+    <style name="Theme.DrinkSugar" parent="android:Theme.Material.Light.NoActionBar" />
+</resources>
