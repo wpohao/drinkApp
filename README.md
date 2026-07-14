@@ -16,7 +16,7 @@
 - **語言／UI**：Kotlin ＋ Jetpack Compose
 - **開發工具**：Android Studio（Windows／macOS／Linux 皆可）
 - **資料**：本機 SQLite（Room），無伺服器
-- **統計圖**：Compose 圖表（趨勢折線用 Vico；圓餅圖用 compose-charts 或自繪 Canvas）
+- **統計圖**：Compose Canvas 自繪（趨勢折線／圓餅圖／日曆，避免第三方圖表庫版本風險）
 - **通知**：NotificationManager ＋ WorkManager（規則式，非 AI）
 - **變現**：AdMob（Google Mobile Ads Android SDK）
 - **相依管理**：Gradle（Kotlin DSL ＋ Version Catalog）
