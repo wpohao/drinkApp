@@ -8,7 +8,8 @@
 
 - ✅ **設計文件（spec）完成**：`docs/superpowers/specs/2026-07-09-飲料糖分追蹤-design.md`（2026-07-14 改為 Android 版）
 - ✅ **實作計畫（TDD 任務）完成**：`docs/superpowers/plans/2026-07-09-飲料糖分追蹤-v1.md`
-- ⏳ **待實作**：用 Android Studio 開工即可（**Windows 可全程開發／build／測試／上架，不需 Mac**）。
+- ✅ **V1 全部程式碼已實作**（Task 1–18：資料層／計算／Repository／今日／記一杯／歷史／設定／通知／AdMob／App 組裝，含對應測試）。
+- ⏳ **待完成**：`docs/上架前檢查清單.md`（Task 19）— 正式 AdMob ID、簽章 keystore、release bundle、Play Console 上架資料等，尚未處理。
 
 ## 技術棧（V1）
 
@@ -36,6 +37,6 @@
 - **iOS 移植**：Android 驗證成功後用 SwiftUI 重寫 UI 移植（Core 邏輯已分層隔離）
 - **並行**：健身、情緒支柱掛入同一個 App 外殼
 
-## 開始實作
+## 開始開發
 
-用 Android Studio 開啟本 repo，依照 `docs/superpowers/plans/` 的實作計畫逐一任務執行（每個任務都是 TDD：先寫測試 → 跑紅 → 實作 → 跑綠 → commit）。
+用 Android Studio 或 `./gradlew` 開啟本 repo。V1 功能已實作完成，接下來的工作是 `docs/上架前檢查清單.md`（Task 19）：換正式 AdMob ID、設定簽章、產生 release bundle、填寫 Play Console 上架資料。
